@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="sample.PersonaEntity" table="persona" schema="ggs">
+        <id name="personaCl">
+            <column name="persona_cl" sql-type="int(11)"/>
+        </id>
+        <property name="nombre">
+            <column name="nombre" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="nacimiento">
+            <column name="nacimiento" sql-type="date" not-null="true"/>
+        </property>
+        <property name="telefono">
+            <column name="telefono" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="domicilio">
+            <column name="domicilio" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="correo">
+            <column name="correo" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+        <property name="altura">
+            <column name="altura" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="peso">
+            <column name="peso" sql-type="float" precision="-1" not-null="true"/>
+        </property>
+        <property name="notas">
+            <column name="notas" sql-type="varchar(45)" length="45" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
